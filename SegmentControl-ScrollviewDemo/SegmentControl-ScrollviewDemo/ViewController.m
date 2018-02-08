@@ -39,11 +39,11 @@
     [self.view addSubview:segmentC];
     
     // 创建scrollview
-    self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64,SCREEN_WIDTH, SCREEN_HEIGHT-64)];
+    self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64,SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
     self.scrollview.backgroundColor = [UIColor redColor];
     self.scrollview.delegate = self;
     self.scrollview.alwaysBounceHorizontal = YES;
-    self.scrollview.contentSize = CGSizeMake(self.view.bounds.size.width * 2, self.view.bounds.size.height-164);
+    self.scrollview.contentSize = CGSizeMake(SCREEN_WIDTH * 2, SCREEN_HEIGHT - 64);
     self.scrollview.pagingEnabled = YES;
     self.scrollview.bounces = NO;
     [self.view addSubview:self.scrollview];
