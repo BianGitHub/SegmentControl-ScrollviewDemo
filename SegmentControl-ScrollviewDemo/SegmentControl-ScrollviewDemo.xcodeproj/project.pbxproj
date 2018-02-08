@@ -13,6 +13,8 @@
 		114D18AC202BFA79008BDCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114D18AB202BFA79008BDCE6 /* Assets.xcassets */; };
 		114D18AF202BFA79008BDCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114D18AD202BFA79008BDCE6 /* LaunchScreen.storyboard */; };
 		114D18B2202BFA79008BDCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D18B1202BFA79008BDCE6 /* main.m */; };
+		114D18BA202BFEA0008BDCE6 /* LoginView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D18B9202BFEA0008BDCE6 /* LoginView1.m */; };
+		114D18BD202BFEAB008BDCE6 /* LoginView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D18BC202BFEAB008BDCE6 /* LoginView2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		114D18AE202BFA79008BDCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114D18B0202BFA79008BDCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114D18B1202BFA79008BDCE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		114D18B8202BFEA0008BDCE6 /* LoginView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView1.h; sourceTree = "<group>"; };
+		114D18B9202BFEA0008BDCE6 /* LoginView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView1.m; sourceTree = "<group>"; };
+		114D18BB202BFEAB008BDCE6 /* LoginView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView2.h; sourceTree = "<group>"; };
+		114D18BC202BFEAB008BDCE6 /* LoginView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				114D18A3202BFA79008BDCE6 /* AppDelegate.m */,
 				114D18A5202BFA79008BDCE6 /* ViewController.h */,
 				114D18A6202BFA79008BDCE6 /* ViewController.m */,
+				114D18B8202BFEA0008BDCE6 /* LoginView1.h */,
+				114D18B9202BFEA0008BDCE6 /* LoginView1.m */,
+				114D18BB202BFEAB008BDCE6 /* LoginView2.h */,
+				114D18BC202BFEAB008BDCE6 /* LoginView2.m */,
 				114D18A8202BFA79008BDCE6 /* Main.storyboard */,
 				114D18AB202BFA79008BDCE6 /* Assets.xcassets */,
 				114D18AD202BFA79008BDCE6 /* LaunchScreen.storyboard */,
@@ -142,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114D18BA202BFEA0008BDCE6 /* LoginView1.m in Sources */,
 				114D18A7202BFA79008BDCE6 /* ViewController.m in Sources */,
 				114D18B2202BFA79008BDCE6 /* main.m in Sources */,
+				114D18BD202BFEAB008BDCE6 /* LoginView2.m in Sources */,
 				114D18A4202BFA79008BDCE6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
