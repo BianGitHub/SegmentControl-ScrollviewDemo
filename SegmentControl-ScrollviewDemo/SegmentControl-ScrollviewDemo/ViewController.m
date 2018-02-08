@@ -15,6 +15,7 @@
 
 @interface ViewController () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollview;
+@property (nonatomic, strong) UISegmentedControl *segmentC;
 @property (nonatomic, strong) LoginView1 *view1;
 @property (nonatomic, strong) LoginView2 *view2;
 @end
@@ -33,11 +34,11 @@
     NSArray *arr = @[@"登录一",@"登录二"];
     
     // 创建segmentControl
-    UISegmentedControl *segmentC = [[UISegmentedControl alloc] initWithItems:arr];
-    segmentC.frame = CGRectMake(20, 20, SCREEN_WIDTH - 20 * 2, 44);
-    segmentC.selectedSegmentIndex = 0;//设置默认选择项索引
-    [segmentC addTarget:self action:@selector(segmentCAction:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:segmentC];
+    self.segmentC = [[UISegmentedControl alloc] initWithItems:arr];
+    self.segmentC.frame = CGRectMake(20, 20, SCREEN_WIDTH - 20 * 2, 44);
+    self.segmentC.selectedSegmentIndex = 0;//设置默认选择项索引
+    [self.segmentC addTarget:self action:@selector(segmentCAction) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.segmentC];
     
     // 创建scrollview
     self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64,SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
@@ -57,8 +58,22 @@
 }
 
 #pragma mark - segmentCAction
-- (void)segmentCAction:(UISegmentedControl *)segmentC {
-    NSLog(@"%zd", segmentC.selectedSegmentIndex);
+- (void)segmentCAction {
+    NSLog(@"%zd", self.segmentC.selectedSegmentIndex);
+    
+    if (self.scrollview.contentOffset.x != self.segmentC.selectedSegmentIndex * SCREEN_WIDTH) {
+        [self.scrollview setContentOffset:CGPointMake(self.segmentC.selectedSegmentIndex * SCREEN_WIDTH, 0) animated:YES];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.x <= SCREEN_WIDTH * 0.5) {
+        self.segmentC.selectedSegmentIndex = 0;
+    } else if (scrollView.contentOffset.x >= SCREEN_WIDTH * 0.5) {
+        self.segmentC.selectedSegmentIndex = 1;
+    }
 }
 
 @end
